@@ -66,3 +66,4 @@ export default function CategoryPage() {
         </div>
     );
 }
+// Actualizacion forzada
