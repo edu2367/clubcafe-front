@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center relative overflow-hidden bg-black font-sans">
 
-      {/* IMAGEN DE FONDO DIRECTA (Hecha por mí para ti) */}
+      {/* IMAGEN DE FONDO (Cargada desde internet) */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{
@@ -15,12 +15,12 @@ export default function Home() {
         }}
       />
 
-      {/* Capa de profundidad */}
+      {/* Capa de oscuridad extra para que el texto resalte */}
       <div className="absolute inset-0 z-1 bg-gradient-to-b from-black/70 via-black/20 to-black/90" />
 
       <div className="relative z-10 space-y-6 md:space-y-10 flex flex-col items-center animate-in fade-in zoom-in duration-1000">
 
-        {/* Logo con brillo sutil */}
+        {/* Logo de Club Café */}
         <div className="scale-110 md:scale-150 mb-2 drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
           <LogoCafe className="w-16 h-16 md:w-20 md:h-20 text-white" />
         </div>
