@@ -37,9 +37,9 @@ export default function Home() {
       <div className="absolute inset-0 z-1 bg-gradient-to-b from-black/80 via-black/20 to-black/95" />
 
       {/* CONTENIDO PRINCIPAL */}
-      <div className="relative z-10 w-full max-w-2xl flex flex-col items-center justify-center min-h-[450px]">
+      <div className="relative z-10 w-full max-w-3xl flex flex-col items-center justify-center min-h-[500px]">
 
-        {/* ESCENA 1: MARCA */}
+        {/* --- ESCENA 1: MARCA Y CARTA (Desaparece al cambiar) --- */}
         <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-1000 transform ${isPetFriendlyView ? 'opacity-0 translate-y-10 scale-95 pointer-events-none' : 'opacity-100 translate-y-0 scale-100'}`}>
           <div className="scale-110 md:scale-150 mb-8 drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]">
             <LogoCafe className="w-16 h-16 md:w-20 md:h-20 text-white" />
@@ -49,12 +49,32 @@ export default function Home() {
             Club Café
           </h1>
 
-          <p className="text-zinc-300 text-lg md:text-2xl font-light leading-relaxed italic mb-10 max-w-sm">
+          <p className="text-zinc-300 text-lg md:text-2xl font-light leading-relaxed italic mb-12 max-w-sm">
             "Pura esencia. Puro café. Muy pronto."
           </p>
+
+          {/* BOTONES MONOCROMÁTICOS */}
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            {/* Tag Próximamente */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-[9px] text-zinc-400 font-bold uppercase tracking-[0.2em]">
+              <Sparkles size={10} className="text-yellow-500 animate-pulse" />
+              Próximamente
+            </div>
+
+            {/* BOTÓN CARTA FINO Y ELEGANTE */}
+            <a
+              href="https://app.qrpro.io/q/3845c8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 px-6 py-3 border border-white/30 rounded-full text-white hover:bg-white/10 hover:border-white/60 transition-all"
+            >
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Ver Nuestra Carta</span>
+              <ChevronDown size={14} className="text-white/70 group-hover:translate-y-1 transition-transform" />
+            </a>
+          </div>
         </div>
 
-        {/* ESCENA 2: PET FRIENDLY */}
+        {/* --- ESCENA 2: PET FRIENDLY (Aparece sola) --- */}
         <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-1000 transform ${isPetFriendlyView ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-10 scale-95 pointer-events-none'}`}>
           <div className="mb-6 p-4 bg-white/5 rounded-full border border-white/10 backdrop-blur-md">
             <PawPrint className="w-12 h-12 md:w-16 md:h-16 text-white" />
@@ -76,41 +96,16 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SECCIÓN DE ACCIÓN (Botones fijos en el centro bajo) */}
-      <div className="relative z-20 flex flex-col items-center gap-6 mt-4">
-        <div className="inline-flex items-center gap-3 px-6 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] text-zinc-400 font-bold uppercase tracking-[0.3em]">
-          <Sparkles size={12} className="text-yellow-500 animate-pulse" />
-          Próximamente
-        </div>
-
-        {/* BOTÓN "NUESTRA CARTA" ESTILO DROPDOWN */}
-        <a
-          href="https://app.qrpro.io/q/3845c8"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex flex-col items-center gap-2 transition-all hover:scale-105"
-        >
-          <div className="flex items-center gap-3 px-10 py-4 bg-white text-black rounded-sm shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all group-hover:bg-zinc-200">
-            <span className="text-[12px] md:text-sm font-black uppercase tracking-[0.2em]">Nuestra Carta</span>
-            <ChevronDown size={18} className="animate-bounce" />
-          </div>
-        </a>
-      </div>
-
-      {/* FOOTER */}
-      <div className="absolute bottom-6 flex flex-col items-center gap-5">
-        <div className="flex items-center gap-8 text-zinc-500">
+      {/* FOOTER MINIMALISTA */}
+      <div className="absolute bottom-6 flex flex-col items-center gap-4 opacity-50 hover:opacity-100 transition-opacity">
+        <div className="flex items-center gap-6">
           <a href="https://www.instagram.com/clubcafe.temuco" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-            <Instagram size={20} />
+            <Instagram size={18} />
           </a>
-          <div className="h-4 w-px bg-zinc-800" />
           <a href="mailto:hola@clubcafe.cl" className="hover:text-white transition-colors">
-            <Mail size={20} />
+            <Mail size={18} />
           </a>
         </div>
-        <p className="text-zinc-700 text-[8px] font-bold uppercase tracking-[0.4em]">
-          © 2026 Club Café — Temuco
-        </p>
       </div>
     </div>
   );
