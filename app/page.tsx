@@ -15,7 +15,7 @@ export default function Home() {
         }}
       />
 
-      {/* Capa de oscuridad extra para que el texto resalte */}
+      {/* Capa de oscuridad extra */}
       <div className="absolute inset-0 z-1 bg-gradient-to-b from-black/70 via-black/20 to-black/90" />
 
       <div className="relative z-10 space-y-6 md:space-y-10 flex flex-col items-center animate-in fade-in zoom-in duration-1000">
@@ -39,11 +39,12 @@ export default function Home() {
         </div>
 
         <div className="space-y-8 max-w-[300px] md:max-w-md">
+          {/* TU NUEVA FRASE AQUÍ */}
           <p className="text-zinc-200 text-lg md:text-2xl font-light leading-relaxed drop-shadow-md italic">
-            "El aroma ya se siente."
+            "Pura esencia. Puro café. Muy pronto."
           </p>
 
-          <div className="inline-flex items-center gap-3 px-8 py-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-[11px] text-white font-bold uppercase tracking-[0.3em] hover:bg-white/10 transition-all cursor-default">
+          <div className="inline-flex items-center gap-3 px-8 py-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full text-[11px] text-white font-bold uppercase tracking-[0.3em]">
             <Sparkles size={14} className="text-yellow-500 animate-pulse" />
             Próximamente
           </div>
